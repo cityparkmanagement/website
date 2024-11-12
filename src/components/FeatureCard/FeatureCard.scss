@@ -1,0 +1,53 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/global" as *;
+
+.card {
+  width: 320px;
+  height: 430px;
+  background-color: silver;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px rgb(105, 105, 105);
+
+  &__title {
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    background-color: rgb(50, 50, 50);
+    flex-direction: column;
+  }
+
+  &__titleText {
+    margin: 0;
+    margin-bottom: 8px;
+    @include cardTitle;
+  }
+
+  &__subtitle {
+    margin: 0;
+    text-align: center;
+    @include cardSubtitle;
+  }
+
+  &__content {
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-top-color: $CpaBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__svg {
+    margin: 12px;
+    width: 40%;
+  }
+
+  &__contentText {
+    margin: 0 16px;
+    text-align: center;
+    @include cardText;
+  }
+}

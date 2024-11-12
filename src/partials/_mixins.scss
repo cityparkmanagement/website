@@ -31,13 +31,48 @@
 @mixin heroMainText {
   font-family: 'Outfit', Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 3rem;
-  color: black;
+  font-size: 3.5rem;
+  color: white;
 }
 
 @mixin heroText {
   font-family: 'Outfit', Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
-  color: rgb(99, 99, 99);
+  font-size: 1.8rem;
+  color: white;
+}
+
+@mixin cardTitle {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: white;
+}
+
+@mixin cardText {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: black;
+}
+
+@mixin cardSubtitle {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+}
+
+@mixin aimTitle {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: black;
+}
+
+@mixin aimText {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: black;
 }

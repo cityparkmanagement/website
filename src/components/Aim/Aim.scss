@@ -1,0 +1,36 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/global" as *;
+
+.aim {
+  background-color: silver;
+  width: 100vw;
+  padding: 62px 0;
+  display: flex;
+  
+  &__container {
+    width: 1080px;
+    display: flex;
+  }
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__title {
+    margin: 0;
+    @include aimTitle;
+  }
+
+  &__text {
+    margin: 0;
+    @include aimText;
+  }
+
+  &__road {
+    margin-top: 36px;
+    width: 20%;
+  }
+}
