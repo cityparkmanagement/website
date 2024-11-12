@@ -1,0 +1,87 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/global" as *;
+
+.topNav {
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-color: $CpaBlue;
+  border-bottom-width: 6px;
+  // padding: 8px 16px;
+  background-color: black;
+  overflow: hidden;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  // height: 30px;
+
+  &__logoContainer {
+    display: flex;
+    padding: 0 16px;
+    padding-top: 4px;
+    background-color: $CpaBlue;
+    align-items: center;
+    position: relative;
+    // z-index: 2;
+  }
+
+  &__containerSlant {
+    position: absolute;
+    right: -120px;
+    top: -100px;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    // z-index: 1;
+    transform: rotate(45deg);
+  }
+
+  &__logo {
+    // width: 135px;
+    height: 70px;
+
+    @include tablet {
+      height: 85px;
+    }
+  }
+
+  &__title {
+    margin: 0 16px;
+    margin-right: 100px;
+    @include logoText;
+  }
+
+  &__menuContainer {
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__menuList {
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    list-style: none;
+  }
+
+  &__menuItem {
+    margin: 0 36px;
+
+    @include navLink;
+  }
+
+  &__payButton {
+    position: absolute;
+    right: 36px;
+    height: fit-content;
+    padding: 8px 16px;
+    border-style: solid;
+    border-color: $CpaBlue;
+    border-radius: 20px;
+    background-color: black;
+
+    @include navLink;
+  }
+}

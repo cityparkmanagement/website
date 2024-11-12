@@ -1,0 +1,43 @@
+@use "./global" as *;
+@use "./variables" as *;
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin logoText {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  font-style: italic;
+  color: white;
+}
+
+@mixin navLink {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+}
+
+@mixin heroMainText {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: black;
+}
+
+@mixin heroText {
+  font-family: 'Outfit', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgb(99, 99, 99);
+}

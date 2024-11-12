@@ -1,0 +1,43 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/global" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.hero {
+
+  // border-style: solid;
+  // border-color: red;
+  padding-top: 100px;
+  width: 1080px;
+  height: 88.5vh;
+  display: flex;
+  align-items: center;
+
+  &__textSection {
+    // border-style: solid;
+    // border-color: purple;
+
+    width: 50%;
+  }
+
+  &__mainText {
+    // font-family: 'Roboto';
+    @include heroMainText
+  }
+
+  &__text {
+    @include heroText
+  }
+
+  &__lotImgContainer {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  &__lotImg {
+    width: 100%;
+  }
+}
