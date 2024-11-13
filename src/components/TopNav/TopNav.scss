@@ -73,9 +73,9 @@
   }
 
   &__payButton {
-    position: absolute;
-    right: 36px;
-    height: fit-content;
+    // position: absolute;
+    // right: 36px;
+    // height: fit-content;
     padding: 8px 16px;
     border-style: solid;
     border-color: $CpaBlue;
@@ -83,5 +83,20 @@
     background-color: black;
 
     @include navLink;
+  }
+
+  &__buttonLink {
+    position: absolute;
+    right: 36px;
+    height: fit-content;
+  }
+
+  &__payButton:hover {
+    cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
   }
 }

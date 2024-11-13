@@ -1,0 +1,121 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/global" as *;
+
+.dispute {
+  // height: 75vh;
+  background-color: silver;
+
+  &__container {
+    display: flex;
+    width: 1080px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px
+  }
+
+  &__title {
+    @include aimTitle;
+    margin: 0;
+    margin-bottom: 16px
+  }
+
+  &__text {
+    @include aimText;
+    margin: 0;
+  }
+
+  &__form {
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 64px;
+  }
+
+  &__horizontalFormDiv {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+
+  &__textField {
+    background-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $DarkBlue;
+    border-radius: 10px;
+    height: 22px;
+    padding: 4px 8px;
+    font-family: 'Outfit';
+    user-select: none;
+  }
+
+  &__label {
+    @include footerItem;
+  }
+
+  &__messageDiv {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__message {
+    background-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $DarkBlue;
+    border-radius: 10px;
+    height: 130px;
+    resize: vertical;
+    padding: 4px 8px;
+    font-family: 'Outfit';
+    user-select: none;
+  }
+
+  &__formDiv {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__addressField {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__textField:focus {
+    outline: none;
+  }
+
+  &__message:focus {
+    outline: none;
+  }
+
+  &__submit {
+    align-self: flex-start;
+    background-color: $DarkBlue;
+    color: #FFF;
+    padding: 8px 24px;
+    border-style: none;
+    border-radius: 20px;
+    margin-top: 16px;
+
+    @include formButton;
+  }
+
+  &__submit:hover {
+    cursor: pointer;
+  }
+}

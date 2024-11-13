@@ -1,0 +1,48 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/global" as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    margin: 62px 0;
+    width: 1080px;
+    display: flex;
+  }
+
+  &__logo {
+    height: 160px;
+  }
+
+  &__list {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__subtitle {
+    margin: 8px 0 16px 0;
+    @include footerSub;
+  }
+
+  &__listItem {
+    margin-bottom: 8px;
+    @include footerItem;
+  }
+
+  &__nav {
+    margin-left: 64px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+  }
+
+  &__link:hover{
+    color: black;
+  }
+}
