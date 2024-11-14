@@ -8,12 +8,20 @@
 
   &__container {
     margin: 62px 0;
-    width: 1080px;
+
     display: flex;
+
+    @include desktop {
+      width: 1080px;
+    }
   }
 
   &__logo {
+    height: 80px;
+
+    @include tablet {
     height: 160px;
+    }
   }
 
   &__list {
@@ -34,7 +42,11 @@
   }
 
   &__nav {
-    margin-left: 64px;
+    margin-left: 16px;
+
+    @include tablet {
+      margin-left: 64px;
+    }
   }
 
   &__link {
@@ -42,7 +54,7 @@
     color: rgb(100, 100, 100);
   }
 
-  &__link:hover{
+  &__link:hover {
     color: black;
   }
 }

@@ -4,8 +4,20 @@
 
 .features {
   margin: 62px 0;
-  width: 1080px;
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+
+  @include tablet {
+  margin: 62px 64px;
+  justify-content: center;
+  }
+
+  @include desktop {
+    width: 1080px;
+    justify-content: space-between;
+  }
 }
