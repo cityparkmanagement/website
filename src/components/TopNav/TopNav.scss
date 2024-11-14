@@ -23,6 +23,10 @@
     align-items: center;
     position: relative;
     // z-index: 2;
+
+    // @include desktop {
+    //   padding: 0 32px;
+    // }
   }
 
   &__containerSlant {
@@ -34,6 +38,16 @@
     height: 200px;
     // z-index: 1;
     transform: rotate(45deg);
+
+    @include tablet {
+      right: -160px;
+      top: -100px;
+    }
+
+    @include desktop {
+      right: -120px;
+      top: -100px;
+    }
   }
 
   &__logo {
@@ -41,14 +55,28 @@
     height: 70px;
 
     @include tablet {
+      height: 70px;
+    }
+
+    @include desktop {
       height: 85px;
     }
   }
 
   &__title {
-    margin: 0 16px;
+    margin: 0 8px;
     margin-right: 100px;
     @include logoText;
+
+    @include tablet {
+      margin: 0 8px;
+      margin-right: 45px;
+    }
+
+    @include desktop {
+      margin: 0 16px;
+      margin-right: 100px;
+    }
   }
 
   &__menuContainer {
@@ -64,10 +92,22 @@
     color: white;
     display: flex;
     list-style: none;
+    align-items: flex-start;
+
+    @include desktop {
+    }
   }
 
   &__menuItem {
     margin: 0 36px;
+
+    @include tablet {
+      margin: 0 36px 0 0;
+    }
+
+    @include desktop {
+      margin: 0 36px;
+    }
 
     @include navLink;
   }
@@ -98,5 +138,113 @@
   &__link {
     text-decoration: none;
     color: white;
+  }
+}
+
+.mobNav {
+  // padding: 4px 16px;
+  // background-color: $CpaBlue;
+  box-sizing: border-box;
+  width: 100vw;
+  position: relative;
+
+  &__navContainer {
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    background-color: $CpaBlue;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+  }
+
+  &__titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56%;
+  }
+
+  &__burgerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+  }
+
+  &__title {
+    margin: 0 8px;
+    @include logoText;
+  }
+
+  &__logo {
+    height: 60px;
+  }
+
+  &__burger {
+    height: 36px;
+  }
+
+  &__sidebar {
+    padding: 4px 36px;
+    background-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: $CpaBlue;
+    position: absolute;
+    // width: 80%;
+    // width: 100%;
+    left: 0;
+    right: 0;
+    top: -200px;
+    transition: all .4s;
+    z-index: 1;
+  }
+
+  &__sidebar.active {
+    top: 68px;
+  }
+
+  &__menuList {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+  }
+
+  &__menuItem {
+    margin-bottom: 16px;
+
+    @include navLink
+  }
+
+  &__payButton {
+    // position: absolute;
+    // right: 36px;
+    // height: fit-content;
+    padding: 8px 16px;
+    border-style: solid;
+    border-color: $CpaBlue;
+    border-radius: 20px;
+    background-color: black;
+    margin-bottom: 24px;
+
+    @include navLink;
+  }
+
+  &__payButton:hover {
+    cursor: pointer;
+  }
+
+  &__buttonContainer {
+    display: flex;
+    justify-content: center;
+    // width: 100vw;
   }
 }

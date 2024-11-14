@@ -14,15 +14,23 @@
 }
 
 @mixin logoText {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Outfit', Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 2rem;
-  font-style: italic;
+  font-size: 1.2rem;
+  // font-style: italic;
   color: white;
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+  }
 }
 
 @mixin navLink {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Outfit', Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
   color: white;
