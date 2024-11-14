@@ -22,7 +22,7 @@ const Dispute = () => {
           type="hidden"
           F
           name="access_key"
-          value="REPLACE WITH WEB3FORMS ACCESS KEY"
+          value="5ade4759-adc6-4860-b596-85d17cbdebba"
         />
         <div className="dispute__horizontalFormDiv">
           <div className="dispute__field">

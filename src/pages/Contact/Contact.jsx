@@ -22,7 +22,7 @@ const Contact = () => {
         <input
           type="hidden"
           name="access_key"
-          value="REPLACE WITH WEB3FORMS ACCESS KEY"
+          value="ad67a6d1-35e8-4344-8387-e3998aaff930"
         />
         <div className="contact__horizontalFormDiv">
           <div className="contact__field">
